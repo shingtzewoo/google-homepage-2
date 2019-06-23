@@ -9,24 +9,136 @@ header {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 100%;
     margin: auto;
-    border: 1px black solid;
     grid-template-areas: "header1 header2";
     width: 100%;
     height: 30px;
-    
 }
 
-.header1 {
-    background-color: blue;
+p {
+    color: rgba(0,0,0,0.87)
 }
 
 .header1 p {
     font-size: 14px;
-    color: red;
     display: inline-block;
     margin-left: 5px;
 }
 
-.header2 {
-    background-color: black;
+.header1 p:hover, .header2 p:hover {
+    text-decoration: underline;
+    color: lightgrey;
 }
+
+
+.header2 {
+    justify-self: end;
+}
+
+.header2 p {
+    display: inline-block;
+    font-size: 14px;
+    margin-right: 5px;
+    right: 40px;
+    position: relative;
+    bottom: 8px;
+}
+
+.header2 div {
+    display: inline-block;
+    position: relative;
+    right: 35px;
+}
+
+.header2 #profile {
+    display: inline-block;
+    position: relative;
+    right: 30px;
+    top: 4px;
+}
+
+main {
+    display: grid;
+    width: 100%;
+    height: 500px;
+    grid-gap: 10px;
+    position: relative;
+    top: 80px;
+    grid-template-columns: 100%;
+    grid-template-rows: 220px 50px 70px 60px;
+    grid-template-areas: "google-image"
+                         "search"
+                         "buttons"
+                         "language";
+    margin: auto;
+    border: black 1px solid;
+}
+
+.google-image {
+    text-align: center;
+}
+
+.search {
+    text-align: center;
+}
+
+.search input[type=text] {
+    position: relative;
+    width: 500px;
+    height: 50px;
+    left: 10px;
+    bottom: 10px;
+    border-radius: 50px;
+    border: 1px lightgrey solid;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    color: black;
+    line-height: 34px;
+    text-indent: 20px;
+}
+
+.search input[type=text]:hover {
+    box-shadow: grey 2px 2px 5px 2px;
+}
+
+.search input[type=text]:focus {
+    box-shadow: grey 2px 2px 5px 2px;
+    outline: none;
+}
+
+.search > img {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    z-index: 2;
+    right: 35px;
+    bottom: 3px;
+}
+
+.buttons {
+    justify-self: center;
+}
+
+.buttons > button {
+    width: 128px;
+    height: 37px;
+    margin: 0px 4px;
+    background-color: #f2f2f2;
+    border-radius: 4px;
+    border: none;
+    font-size: 14px;
+    color: #5F6368;
+    cursor: pointer;
+    text-align: center;
+}
+
+.buttons > button:hover {
+    color: black;
+    outline: none;
+    border: 1px lightgrey solid;
+}
+
+.language {
+    
+}
+
